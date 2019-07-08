@@ -8,7 +8,6 @@ def add():
 
     try:
         if request.method == 'POST':
-            # data =request.json()
             data = request.get_json()
             print(str(request) + "\n***********\n"+str(data)+"\n***********\n")
             list_of_dict.append(data)
@@ -24,11 +23,9 @@ def return_all_jsons():
                            title='Task for flask',
                            list_of_dict=list_of_dict)
 
-
-@app.route('/')
-def hello_world():
-    return 'Task for flask'
-
+# @app.route('/')
+# def hello_world():
+#     return 'Task for flask'
 
 if __name__ == '__main__':
     app.run()
